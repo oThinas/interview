@@ -2,7 +2,7 @@
 
 import { Header } from '@/components/header';
 import { QUESTIONS } from '@/config/questions';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Data } from './data.interface';
 
 export default function Page() {
@@ -50,13 +50,13 @@ export default function Page() {
             </p>
           ) : (
             <>
-              {data.map((user) => (
-                <>
+              {data.map((user, index) => (
+                <Fragment key={index}>
                   <p>{user.id}</p>
                   <p>{user.name}</p>
                   <p>{user.username}</p>
                   <p>{user.email}</p>
-                </>
+                </Fragment>
               ))}
             </>
           )}

@@ -12,7 +12,7 @@ export function Table() {
           </th>
 
           <th className="table-cell border border-white">
-            useEffect
+            useReducer
           </th>
         </tr>
       </thead>

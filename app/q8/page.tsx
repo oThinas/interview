@@ -9,13 +9,13 @@ export default function Page() {
   const { addItem, items, removeItem, totalPrice, updateItemQuantity } = useCart();
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState(0);
-  const [productQuantity, setProductQuantit] = useState(1);
+  const [productQuantity, setProductQuantity] = useState(1);
 
   const handleAddItem = useCallback((product: Product) => {
     addItem(product);
     setProductName('');
     setProductPrice(0);
-    setProductQuantit(1);
+    setProductQuantity(1);
   }, [addItem]);
 
   const handleRemoveItem = useCallback((productId: number) => {
@@ -66,7 +66,7 @@ export default function Page() {
       />
 
       <input
-        type="number" value={productQuantity} onChange={(e) => setProductQuantit(parseInt(e.target.value))}
+        type="number" value={productQuantity} onChange={(e) => setProductQuantity(parseInt(e.target.value))}
         className="text-black"
       />
 

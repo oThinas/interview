@@ -4,7 +4,6 @@ interface ChildComponentProps {
   count: number;
 }
 
-
 export const ChildComponent = memo((props: ChildComponentProps) => {
   console.log('ChildComponent renderizado');
 
